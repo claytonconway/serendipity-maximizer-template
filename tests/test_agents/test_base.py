@@ -1,8 +1,8 @@
 """Basic agent structure tests."""
 
-from src.serendipity_maximizer.agents.base import BaseSpecialist
-from src.serendipity_maximizer.agents.scoring import ImpactScorer
-from src.serendipity_maximizer.agents.serendipity import SerendipityDiscoverer
+from serendipity_maximizer.agents.base import BaseSpecialist
+from serendipity_maximizer.agents.scoring import ImpactScorer
+from serendipity_maximizer.agents.serendipity import SerendipityDiscoverer
 
 
 def test_specialists_are_instantiable_and_buildable():

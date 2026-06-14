@@ -1,4 +1,4 @@
-from src.serendipity_maximizer.discovery.recombination import recombine
+from serendipity_maximizer.discovery.recombination import recombine
 
 
 def test_recombine_produces_budget_items():

@@ -1,6 +1,6 @@
 """Smoke tests for the demo supervisor (no LLM required)."""
 
-from src.serendipity_maximizer.orchestrators.supervisor_graph import build_demo_graph
+from serendipity_maximizer.orchestrators.supervisor_graph import build_demo_graph
 
 
 def test_demo_graph_runs_without_error(demo_state: dict):

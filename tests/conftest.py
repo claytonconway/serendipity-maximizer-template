@@ -2,7 +2,7 @@
 
 import pytest
 
-from src.serendipity_maximizer.config import SerendipityConfig, get_config
+from serendipity_maximizer.config import SerendipityConfig, get_config
 
 
 @pytest.fixture

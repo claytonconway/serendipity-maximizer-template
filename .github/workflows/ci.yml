@@ -28,4 +28,4 @@ jobs:
           pytest -q --tb=short
       - name: Demo smoke (no keys)
         run: |
-          PYTHONPATH=src python -m serendipity_maximizer.orchestrators.supervisor_graph
+          python -m serendipity_maximizer.orchestrators.supervisor_graph

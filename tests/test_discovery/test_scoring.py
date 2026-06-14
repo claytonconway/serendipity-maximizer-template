@@ -1,6 +1,6 @@
 """Tests for pure discovery scoring functions."""
 
-from src.serendipity_maximizer.discovery.scoring import rank_candidates, score_idea
+from serendipity_maximizer.discovery.scoring import rank_candidates, score_idea
 
 
 def test_score_idea_basic():
