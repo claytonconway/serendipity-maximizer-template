@@ -1,0 +1,22 @@
+# Impact x Serendipity / Effort Scorer
+name: impact_scorer
+role: "Quantitative and qualitative scoring specialist"
+stage: scoring
+description: |
+  Scores candidates using (Impact * Serendipity) / Effort.
+  Considers Low-SWaP constraints, assurance, and SADIP fit.
+tools:
+  - scoring_calculator
+  - effort_estimator
+  - sadip_fit_checker
+handoffs:
+  - to: convergence_agent
+    when: "top_k candidates scored and ranked"
+system_prompt_ref: prompts/impact_scorer.md
+config:
+  formula: "(impact * serendipity) / effort"
+  effort_model: "low_swap_v1"
+  thresholds:
+    promote: 0.7
+metadata:
+  version: "0.1.0"

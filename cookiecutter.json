@@ -1,0 +1,17 @@
+{
+  "project_name": "serendipity-maximizer",
+  "module_name": "serendipity_maximizer",
+  "repo_name": "serendipity-maximizer",
+  "description": "Multi-agent orchestration template for Serendipity Maximizer and SADIP platform using LangGraph.",
+  "author_name": "Your Name",
+  "author_email": "you@example.com",
+  "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
+  "python_version": "3.11",
+  "include_github_actions": "y",
+  "include_tests": "y",
+  "include_notebooks": "y",
+  "include_agents_yaml_packs": "y",
+  "_copy_without_render": [
+    "src/{{cookiecutter.module_name}}/__init__.py"
+  ]
+}

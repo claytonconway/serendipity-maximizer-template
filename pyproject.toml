@@ -1,4 +1,54 @@
 [project]
 name = "serendipity-maximizer"
 version = "0.1.0"
-dependencies = ["langgraph", "langgraph-supervisor", "langchain"]
+description = "Extended Cookiecutter Data Science template for multi-agent orchestration with LangGraph, tailored for Serendipity Maximizer and SADIP platform."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "you@example.com"}
+]
+dependencies = [
+    "langgraph>=0.2",
+    "langgraph-supervisor>=0.0.20",
+    "langchain>=0.2",
+    "langchain-core>=0.2",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "pre-commit",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "ipykernel",
+]
+llm = [
+    "langchain-openai>=0.1",
+    "langchain-anthropic>=0.1",
+]
+
+[project.scripts]
+serendipity-run = "serendipity_maximizer.orchestrators.supervisor_graph:build_demo_graph"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

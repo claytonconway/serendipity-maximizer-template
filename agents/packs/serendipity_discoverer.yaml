@@ -1,0 +1,24 @@
+# Serendipity Discoverer Specialist Pack
+name: serendipity_discoverer
+role: "Idea recombination and weak-signal detector"
+stage: discovery
+description: |
+  Scans references, prior ideas, external signals for novel recombinations.
+  Prioritizes high serendipity (unexpected but valuable) over pure relevance.
+tools:
+  - web_search
+  - reference_retriever
+  - recombination_matrix
+handoffs:
+  - to: impact_scorer
+    when: "at least 3 high-serendipity candidates generated"
+  - to: sbir_mapper
+    when: "candidate has potential defense / dual-use application"
+system_prompt_ref: prompts/serendipity_discoverer.md
+config:
+  recombination_budget: 12
+  min_novelty: 0.65
+  low_swap: true
+metadata:
+  version: "0.1.0"
+  assurance_level: medium

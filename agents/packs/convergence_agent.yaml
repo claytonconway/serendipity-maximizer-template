@@ -1,0 +1,12 @@
+# Convergence & Proposal Agent
+name: convergence_agent
+role: "Synthesizes top ideas into coherent proposal outlines or action plans"
+stage: convergence
+description: "Produces final ranked list + rationale. Prepares artifacts for human review or downstream systems."
+tools:
+  - proposal_drafter
+  - rationale_generator
+handoffs: []
+system_prompt_ref: prompts/convergence_agent.md
+metadata:
+  version: "0.1.0"

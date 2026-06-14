@@ -1,0 +1,15 @@
+# SBIR / Defense Opportunity Mapper
+name: sbir_mapper
+role: "Maps ideas to active or upcoming SBIR/STTR topics, BAA, or other defense calls"
+stage: mapping
+description: "Identifies funding vehicles, alignment with sponsor priorities, and dual-use potential."
+tools:
+  - sbir_topic_search
+  - agency_alignment
+handoffs:
+  - to: impact_scorer
+    when: "mapping complete"
+system_prompt_ref: prompts/sbir_mapper.md
+metadata:
+  version: "0.1.0"
+  domain: defense

@@ -1,0 +1,18 @@
+# Example Low-SWaP + Assurance configuration for Serendipity Maximizer
+# Copy / adapt. Loaded by specialists or orchestrator factory in future.
+
+low_swap:
+  max_tokens_per_step: 1024
+  max_parallel_agents: 2
+  use_quantized: true
+  prefer_local: true
+
+scoring:
+  effort_model: low_swap_v1
+  recombination_budget: 8
+  min_final_score: 0.55
+
+audit:
+  enabled: true
+  log_level: INFO
+  checkpoint_backend: memory   # or sqlite, postgres
